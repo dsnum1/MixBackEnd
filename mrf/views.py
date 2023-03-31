@@ -34,14 +34,11 @@ def login(request):
 
 @csrf_exempt
 def index(request):
-    my_dict = json.loads(request.body.decode('utf-8'))
-    print("received", request.body)
-    print(my_dict) # 👉️ {'first': 'bobby', 'last': 'hadz'}
-    print(type(my_dict)) # 👉️ <class 'dict'>
-    
-    playlist_name = str(my_dict["nameOfPlaylist"])
-    starting = str(my_dict["starting"])
-    ending = str(my_dict["ending"])
+	
+    starting = request.POST.get("starting", "")
+    ending = request.POST.get("posting","")
+    playlist_name = request.POST.get("nameOfPlaylist", "")
+ 
 
     duration = AustinGPSDuration(starting, ending)
     prepared_data = retrieve_spotify_playlist()
