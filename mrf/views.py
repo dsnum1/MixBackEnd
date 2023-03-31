@@ -34,7 +34,7 @@ def login(request):
 
 @csrf_exempt
 def index(request):
-	
+    print(request.POST)
     starting = request.POST.get("starting", "")
     ending = request.POST.get("posting","")
     playlist_name = request.POST.get("nameOfPlaylist", "")
