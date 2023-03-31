@@ -38,6 +38,8 @@ def index(request):
     starting = request.POST.get("starting", "")
     ending = request.POST.get("posting","")
     playlist_name = request.POST.get("nameOfPlaylist", "")
+	
+    print(starting)
  
    
     duration = AustinGPSDuration(starting, ending)
