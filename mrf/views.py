@@ -84,6 +84,7 @@ def AustinGPSDurationRequestFunction(request):
 def AustinGPSDuration(starting, ending):
     origin=starting
     destination = ending
+    print("This is the entered path",starting, ending)
     #user input for postal codes
     url = f"https://maps.googleapis.com/maps/api/distancematrix/json?origins={starting}&destinations={ending}&units=SI&mode=driving&key=AIzaSyB2md1asmg34SJTiM9SpW0Kr-ggE7CE5lk"
     #url for request, adds user input of locations
