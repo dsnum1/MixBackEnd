@@ -36,7 +36,7 @@ def login(request):
 def index(request):
     print(request.POST)
     starting = request.POST.get("starting", "")
-    ending = request.POST.get("posting","")
+    ending = request.POST.get("ending","")
     playlist_name = request.POST.get("nameOfPlaylist", "")
 	
     print(starting, type(starting))
