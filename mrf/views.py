@@ -39,8 +39,9 @@ def index(request):
     ending = request.POST.get("posting","")
     playlist_name = request.POST.get("nameOfPlaylist", "")
  
-
+   
     duration = AustinGPSDuration(starting, ending)
+    print(duration)
     prepared_data = retrieve_spotify_playlist()
     if(type(duration)!=int):
         data = {
