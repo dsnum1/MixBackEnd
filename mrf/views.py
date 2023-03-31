@@ -55,7 +55,7 @@ def index(request):
     link = "https://open.spotify.com/playlist/"+ create_playlist(ls, playlist_name, "This playlist was created by Mix&Ride created by Divyansh Sharma")
 
     data = {'playlist_link' : link, 'message' : "Sucessfully creeated a spotify playlist"}
-
+    print("This is data", data)
     return HttpResponse( json.dumps( data ) )
 
 def AustinGPSDurationRequestFunction(request):
