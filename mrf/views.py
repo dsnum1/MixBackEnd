@@ -50,6 +50,7 @@ def index(request):
             "message":"The address you entered is not valid",
         }
         return HttpResponse( json.dumps( data ) )
+ 
 
     best_combination = driver_function(duration=duration, prepared_data=prepared_data)
     ls = []
@@ -86,6 +87,9 @@ def AustinGPSDuration(starting, ending):
     #user input for postal codes
     url = f"https://maps.googleapis.com/maps/api/distancematrix/json?origins={starting}&destinations={ending}&units=SI&mode=driving&key=AIzaSyB2md1asmg34SJTiM9SpW0Kr-ggE7CE5lk"
     #url for request, adds user input of locations
+
+
+    print(url, type(url))
     payload={}
     headers = {}
 
