@@ -39,7 +39,7 @@ def index(request):
     ending = request.POST.get("posting","")
     playlist_name = request.POST.get("nameOfPlaylist", "")
 	
-    print(starting)
+    print(starting, type(starting))
  
    
     duration = AustinGPSDuration(starting, ending)
@@ -84,7 +84,7 @@ def AustinGPSDuration(starting, ending):
     origin=starting
     destination = ending
     #user input for postal codes
-    url = f"https://maps.googleapis.com/maps/api/distancematrix/json?origins={origin}&destinations={destination}&units=SI&mode=driving&key=AIzaSyB2md1asmg34SJTiM9SpW0Kr-ggE7CE5lk"
+    url = f"https://maps.googleapis.com/maps/api/distancematrix/json?origins={starting}&destinations={ending}&units=SI&mode=driving&key=AIzaSyB2md1asmg34SJTiM9SpW0Kr-ggE7CE5lk"
     #url for request, adds user input of locations
     payload={}
     headers = {}
