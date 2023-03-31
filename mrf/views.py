@@ -88,6 +88,7 @@ def AustinGPSDuration(starting, ending):
     headers = {}
 
     response = requests.request("GET", url, headers=headers, data=payload)
+    print("This is the response :::\n", response)
     response=json.loads(response.text)
 
     #access duration in seconds from json
