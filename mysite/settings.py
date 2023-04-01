@@ -31,7 +31,8 @@ ALLOWED_HOSTS = [
   '111.222.333.444',
   'mywebsite.example',
   'dsnum1.github.io',
-  '0.0.0.0'
+  '0.0.0.0',
+  '13.213.49.236:8000'
 ]
 
 
